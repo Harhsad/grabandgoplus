@@ -322,6 +322,18 @@ section{ padding: 2em 0}
 .hero-content-reseller h3{ font-size: 1.875em;}
 .hero-content-reseller h1, .hero-content-reseller p{ color: #fff;}
 .hero-content-reseller .hero-reseller, .hero-content-reseller .content{ position: relative; margin:4em 0 0 0} 
+.reseller-about{ background: #fff; position: relative; overflow: hidden}
+.reseller-about:after {
+    background: url(../images/sim-cards.png) no-repeat;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 310px;
+    height: 290px;
+    transform: translateY(-50%);
+    top: 50%;
+    right: -3em;
+}
 .reseller-about .content{ padding-left: 2em;}
 .reseller-about .content p{ line-height: 1.8; font-size: 1.125em; color: #222222;}
 .reseller-operator{ background: #F1F8FF; margin: auto; text-align: center;
