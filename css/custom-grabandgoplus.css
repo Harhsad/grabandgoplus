@@ -18,7 +18,7 @@ a, a:hover{ color:inherit; text-decoration:none}
 main {
   flex: 1 0 auto;
 }
-
+figure{margin: 0;}
 .small, small{ font-size:90%}
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #a3a3a3 !important;
@@ -37,7 +37,7 @@ img{ max-width: 100%; height: auto}
 h1{ color:#1c5291; font-size:2.25em; font-family: 'Montserrat', sans-serif; margin: 1rem 0; font-weight:700;}
 h1.red{ color: #00a0e3; font-weight:800;}
 h3{ font-size: 1.5em; font-family: 'Montserrat', sans-serif; font-weight:700;}
-p{font-family: 'Open Sans', sans-serif; font-size:1em; color:#222222; padding-bottom: 1em;}
+p{font-family: 'Open Sans', sans-serif; font-size:1em; color:#222222; padding-bottom: 0;}
 #loom-companion-mv3{display: none !important;}
 body.home{ background:#fff}
 .btn{ border-radius: 0; padding: 15px 20px}
@@ -78,7 +78,7 @@ header .phone-text h3 {
     line-height: 0.5;
     margin: 0;
 }
-#header + div, #header + section, #header + main {    margin-top: 88px;}
+#header + div, #header + section, #header + main {    margin-top: 85px;}
 header.sticky {
     position: fixed;
     width: 100%;
@@ -315,6 +315,35 @@ section{ padding: 2em 0}
 .main-wrapper .card-details .confirmation .custom-control label { font-size: 1em; font-weight: 500; line-height: 1.8em;} 
 .main-wrapper .card-details .confirmation .custom-control input {    margin: 8px -20px}
 
+/*reseller*/
+.hero-content-reseller{ max-height: 450px; background: #1C5291; display: flex; position: relative; color: #fff; align-items: flex-start;
+    padding: 0; margin-bottom: 6em;}
+.hero-content-reseller h1, .reseller-cta .content h1{ font-size: 2.9em;}
+.hero-content-reseller h3{ font-size: 1.875em;}
+.hero-content-reseller h1, .hero-content-reseller p{ color: #fff;}
+.hero-content-reseller .hero-reseller, .hero-content-reseller .content{ position: relative; margin:4em 0 0 0} 
+.reseller-about .content{ padding-left: 2em;}
+.reseller-about .content p{ line-height: 1.8; font-size: 1.125em; color: #222222;}
+.reseller-operator{ background: #F1F8FF; margin: auto; text-align: center;
+    display: flex;
+    justify-content: center;}
+    .reseller-operator h1{ margin: 0.5em 0;}
+    .reseller-operator ul{ margin: 2em 0 1em 0;}
+.reseller-operator ul li{ display: inline-flex; margin: 0 0.5em;}
+.reseller-cta{background: #1C5291; display: flex; flex-direction: column; padding: 0;}
+.reseller-cta .content{ display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 0 2em; width: 85%;
+    text-align: center;
+    margin: auto;}
+    .reseller-cta .hero-reseller{ text-align: center;}
+.reseller-cta .content h1{ color: #fff; font-size: 3.75em;}
+.reseller-cta .content h4{ font-size: 1.875em; color: #fff; font-weight: 600; margin: 0.5em 0 1em 0;}
+.reseller-cta .content p{ color: #fff; margin:1em 0}
+.reseller-cta .content p a{ color:#0D97EF; font-weight: 600; margin:1em 0; text-decoration: underline;}
+
+
+
+
+
 /*responsiveness*/
 @media screen and (min-width:1200px){ 
 	.container{ max-width: 1280px}
@@ -323,8 +352,18 @@ section{ padding: 2em 0}
     .thankyoupage .activation-time.border-box{ margin-left: 4em}
 }
 
+@media screen and (max-width: 1200px){
+    .hero-content-reseller{ max-height: 100%; padding-bottom: 2em; margin-bottom: 2em;}
+    .reseller-cta .content{ padding: 1em; width: 100%;}
+    .reseller-about .content {        padding: 1em;   }
+    h1{font-size: 2.5em !important;}
+    h3{ font-size: 1.5em !important;}
+    
+}
 
+/*ipad*/
 @media (min-width: 768px) and (max-width:1200px) {
+    
     .thankyoupage .activation-time.border-box {
         font-size: 80%;
     }
@@ -340,6 +379,8 @@ section{ padding: 2em 0}
         z-index: -1;
     }
 }
+
+/*mobile*/
 @media (max-width: 767px) { 
 	html{font-size:85%}
     header.sticky {
@@ -382,6 +423,9 @@ section{ padding: 2em 0}
     #clockdiv {
         font-size: 4em;
     }
+    .reseller-operator ul li {margin: 0.5em; width: 28%;     }
+    .hero-content-reseller .hero-reseller, .hero-content-reseller .content{margin: 2em 0 0 0;}
+    .reseller-cta .content h4{font-size: 1.175em;}
 
    
 }
